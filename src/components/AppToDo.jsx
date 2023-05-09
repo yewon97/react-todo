@@ -92,7 +92,7 @@ export default function AppToDo() {
           })}
         </ul>
       </div>
-      <form className={styles.inputBox}>
+      <div className={styles.inputBox}>
         <input
           type="text"
           name="input1"
@@ -124,7 +124,7 @@ export default function AppToDo() {
         <button type="button" className={styles.btnAdd} onClick={handleAdd}>
           Add
         </button>
-      </form>
+      </div>
     </div>
   );
 }

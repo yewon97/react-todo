@@ -1,0 +1,41 @@
+.todo {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.default-checkbox {
+	-webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.text {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.btn-wrapper {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.button {
+	background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+	transition: all 150ms ease-out;
+}
+
+.button:hover {
+	color: var(--color-accent);
+	transform: rotate(15deg) scale(1.2);
+}
