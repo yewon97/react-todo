@@ -1,10 +1,13 @@
 :root {
-	--color-bg-dark: #13334c;
 	--color-bg: #fdfffd;
 	--color-grey: #d1d1d1;
 	--color-text: #111;
-	--color-text-dark: #fff;
 	--color-accent: #fd5f00;
+}
+
+html.dark {
+	--color-bg: #13334c;
+	--color-text: #fff;
 }
 
 @font-face {

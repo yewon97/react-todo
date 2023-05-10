@@ -1,6 +1,6 @@
 .filters {
   display: flex;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid var(--color-grey);
   height: 4rem;
   box-sizing: border-box;
 }
@@ -13,12 +13,12 @@
   padding: 0 2rem;
   background-color: transparent;
   height: 4rem;
-  border: 1px solid #e7e7e7;
-  border-top: 1px solid #e7e7e7;
+  border: 1px solid var(--color-grey);
+  border-top: 1px solid var(--color-grey);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--color-text);
   transition: all 200ms ease-in-out;
 	text-transform: uppercase;
 }
