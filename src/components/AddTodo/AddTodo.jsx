@@ -5,10 +5,11 @@ import styles from './AddTodo.module.css'
 
 export default function AddTodo({ onAdd }) {
   const [text, setText] = useState('');
-  const handleChange = (e) => setText(e.target.value.trim());
+  const handleChange = (e) => setText(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd({ id: uuidv4(), text, status: 'active' });
+		const newText = text.trim();
+    onAdd({ id: uuidv4(), text: newText, status: 'active' });
     if (text.trim().length === 0) {
       return;
     }
