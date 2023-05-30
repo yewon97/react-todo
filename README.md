@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# React로 TODO APP 만들기
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### https://yewon-todoapp.netlify.app/
 
-## Available Scripts
+<img src="/public/images/index.jpg">
 
-In the project directory, you can run:
+<br />
+<br />
 
-### `npm start`
+- 리액트를 이용해 만들어 본 TODO APP. 
+- Todo 항목을 추가, 삭제, 수정하고 필터링할 수 있고, 다크모드를 이용할 수 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 기능
+- Todo 항목 추가: 사용자는 텍스트 입력 필드를 통해 새로운 Todo를 작성하여 추가할 수 있습니다.
+- Todo 항목 삭제: 사용자는 삭제 버튼을 클릭하여 특정 Todo 항목을 제거할 수 있습니다.
+- Todo 항목 수정: 사용자는 수정 버튼을 클릭하여 Todo 항목의 내용을 변경할 수 있습니다.
+- Todo 항목 저장: Todo 항목은 localStorage에 저장되어 새로고침을 해도 이전 데이터를 가져올 수 있습니다.
+- Todo 항목 필터링: 사용자는 여러 필터 옵션 중 하나를 선택하여 해당 상태의 Todo 항목만 보여줄 수 있습니다.
+- 다크 모드: 애플리케이션은 다크 모드와 라이트 모드를 지원합니다. 사용자는 토글 버튼을 통해 모드를 변경할 수 있습니다.
