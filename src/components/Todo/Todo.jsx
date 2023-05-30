@@ -20,7 +20,12 @@ export default function Todo({ todo, onUpdate, onDelete, onModify }) {
   };
   return (
     <li className={styles.todo}>
-      <label htmlFor={id} className={styles.text}>
+      <label
+        htmlFor={id}
+        className={`${styles.text} ${
+          status === 'completed' ? styles.middleline : ''
+        }`}
+      >
         <div className={styles.checkbox}>
           {status === 'completed' ? (
             <MdOutlineCheckBox />
