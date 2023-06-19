@@ -7,6 +7,7 @@ import TodoList from './components/TodoList/TodoList';
 import TodoFilter from './components/TodoFilter/TodoFilter';
 import { DarkModeProvider } from './context/DarkModeContext';
 import DarkModeButton from './components/DarkModeButton/DarkModeButton';
+import TodoListWithReducer from './components/TodoList/TodoListWithReducer';
 
 const filters = ['all', 'active', 'completed'];
 
@@ -38,7 +39,7 @@ function App() {
               onFilterChange={setFilter}
               counts={counts}
             />
-            <TodoList filter={filter} todos={todos} setTodos={setTodos} />
+            <TodoListWithReducer filter={filter} todos={todos} setTodos={setTodos} />
           </div>
         </main>
         <DarkModeButton />
