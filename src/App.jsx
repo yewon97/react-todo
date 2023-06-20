@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useReducer } from 'react';
 import AppToDo from './components/AppToDo';
 import Header from './components/Header/Header';
 import TodoHeader from './components/TodoHeader/TodoHeader';
@@ -8,12 +8,14 @@ import TodoFilter from './components/TodoFilter/TodoFilter';
 import { DarkModeProvider } from './context/DarkModeContext';
 import DarkModeButton from './components/DarkModeButton/DarkModeButton';
 import TodoListWithReducer from './components/TodoList/TodoListWithReducer';
+import todoReducer from './reducer/todo-reducer';
 
 const filters = ['all', 'active', 'completed'];
 
 function App() {
   const [filter, setFilter] = useState(filters[0]);
-  const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
+  // const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
+	const [todos, dispatch] = useReducer(todoReducer, [], readTodosFromLocalStorage);
 
   const counts = {
     all: todos.length,
@@ -39,7 +41,7 @@ function App() {
               onFilterChange={setFilter}
               counts={counts}
             />
-            <TodoListWithReducer filter={filter} todos={todos} setTodos={setTodos} />
+            <TodoListWithReducer filter={filter} todos={todos} dispatch={dispatch} />
           </div>
         </main>
         <DarkModeButton />

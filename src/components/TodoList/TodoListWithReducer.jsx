@@ -2,10 +2,9 @@ import React, { useReducer } from 'react';
 import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
 import styles from './TodoList.module.css'
-import todoReducer from '../../reducer/todo-reducer';
 
-export default function TodoListWithReducer({ todos, setTodos, filter }) {
-	const [data, dispatch] = useReducer(todoReducer, todos);
+export default function TodoListWithReducer({ todos, dispatch, filter }) {
+	console.log('dispatc111h: ', dispatch);
 
   const handleAdd = (todo) => {
 		dispatch({type: 'added', newTodo : todo});
@@ -23,7 +22,7 @@ export default function TodoListWithReducer({ todos, setTodos, filter }) {
 	}
     // setTodos(todos.map((t) => (t.id === modified.id ? modified : t)));
 
-  const filtered = getFilteredItems(data, filter);
+  const filtered = getFilteredItems(todos, filter);
   return (
     <section className={styles.container}>
       <ul className={styles.list}>
