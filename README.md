@@ -1,7 +1,7 @@
 # React로 TODO APP 만들기
 ---
 
-### [ToDo App](https://yewon-todoapp.netlify.app/){:target="_blank"}
+### [ToDo App 배포사이트 보러가기](https://yewon-todoapp.netlify.app/)
 
 <img src="/public/images/index.jpg">
 
