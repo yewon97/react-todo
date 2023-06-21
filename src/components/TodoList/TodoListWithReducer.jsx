@@ -1,26 +1,21 @@
 import React, { useReducer } from 'react';
 import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
-import styles from './TodoList.module.css'
+import styles from './TodoList.module.css';
 
 export default function TodoListWithReducer({ todos, dispatch, filter }) {
-	console.log('dispatc111h: ', dispatch);
-
-  const handleAdd = (todo) => {
-		dispatch({type: 'added', newTodo : todo});
+  const handleAdd = (added) => {
+    dispatch({ type: 'added', payload: added });
   };
   const handleUpdate = (updated) => {
-
-	}
-    // setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
+    dispatch({ type: 'update', payload: updated });
+  };
   const handleDelete = (deleted) => {
-
-	}
-    // setTodos(todos.filter((t) => t.id !== deleted.id));
+		dispatch({ type: 'deleted', payload: deleted });
+	};
   const handleModify = (modified) => {
-
-	}
-    // setTodos(todos.map((t) => (t.id === modified.id ? modified : t)));
+    dispatch({ type: 'update', payload: modified });
+  };
 
   const filtered = getFilteredItems(todos, filter);
   return (

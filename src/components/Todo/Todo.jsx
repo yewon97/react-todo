@@ -7,7 +7,7 @@ import {
   MdEditSquare,
 } from 'react-icons/md';
 
-export default function Todo({ todo, onUpdate, onDelete, onModify }) {
+export default function Todo({ todo, onUpdate, onDelete }) {
   const { id, text, status } = todo;
   const handleChange = (e) => {
     const status = e.target.checked ? 'completed' : 'active';
@@ -16,7 +16,7 @@ export default function Todo({ todo, onUpdate, onDelete, onModify }) {
   const handleDelete = () => onDelete(todo);
   const handleModify = () => {
     const current = prompt('수정할 목록 내용을 입력해주세요.');
-    onModify({ ...todo, text: current });
+    onUpdate({ ...todo, text: current });
   };
   return (
     <li className={styles.todo}>
