@@ -3,16 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 import { MdCancel } from 'react-icons/md';
 import styles from './AddTodo.module.css'
 
-export default function AddTodo({ onAdd }) {
+export default function AddTodo({ dispatch }) {
   const [text, setText] = useState('');
   const handleChange = (e) => setText(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-		const newText = text.trim();
-    onAdd({ id: uuidv4(), text: newText, status: 'active' });
-    if (text.trim().length === 0) {
-      return;
-    }
+		if (text.trim().length === 0) return;
+    dispatch({ type: 'add', id: uuidv4(), text: text.trim(), status: 'active' });
     setText('');
   };
 

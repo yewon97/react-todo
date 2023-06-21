@@ -14,7 +14,6 @@ const today = new Intl.DateTimeFormat('ko', { dateStyle: 'full' }).format(
 
 export default function App() {
   const [filter, setFilter] = useState(filters[0]);
-  // const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
 	const [todos, dispatch] = useReducer(todoReducer, [], readTodosFromLocalStorage);
 
   const counts = {
