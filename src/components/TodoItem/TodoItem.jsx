@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Todo.module.css';
+import styles from './TodoItem.module.css';
 import {
   MdDeleteForever,
   MdOutlineCheckBoxOutlineBlank,
@@ -7,7 +7,7 @@ import {
   MdEditSquare,
 } from 'react-icons/md';
 
-export default function Todo({ todo, dispatch }) {
+export default function TodoItem({ todo, dispatch }) {
   const { id, text, status } = todo;
   const handleChange = (e) => {
     const status = e.target.checked ? 'completed' : 'active';

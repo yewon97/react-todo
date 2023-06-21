@@ -1,6 +1,6 @@
 import React from 'react';
 import AddTodo from '../AddTodo/AddTodo';
-import Todo from '../Todo/Todo';
+import TodoItem from '../TodoItem/TodoItem';
 import styles from './TodoList.module.css';
 
 export default function TodoListWithReducer({ todos, dispatch, filter }) {
@@ -9,7 +9,7 @@ export default function TodoListWithReducer({ todos, dispatch, filter }) {
     <section className={styles.container}>
       <ul className={styles.list}>
         {filtered.map((item) => (
-          <Todo
+          <TodoItem
             key={item.id}
             todo={item}
             dispatch={dispatch}
