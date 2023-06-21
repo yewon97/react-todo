@@ -1,9 +1,5 @@
 import './App.css';
 import React, { useEffect, useState,useReducer } from 'react';
-import AppToDo from './components/AppToDo';
-import Header from './components/Header/Header';
-import TodoHeader from './components/TodoHeader/TodoHeader';
-import TodoList from './components/TodoList/TodoList';
 import TodoFilter from './components/TodoFilter/TodoFilter';
 import { DarkModeProvider } from './context/DarkModeContext';
 import DarkModeButton from './components/DarkModeButton/DarkModeButton';
@@ -11,6 +7,10 @@ import TodoListWithReducer from './components/TodoList/TodoListWithReducer';
 import todoReducer from './reducer/todo-reducer';
 
 const filters = ['all', 'active', 'completed'];
+
+const today = new Intl.DateTimeFormat('ko', { dateStyle: 'full' }).format(
+  new Date(),
+);
 
 function App() {
   const [filter, setFilter] = useState(filters[0]);
@@ -30,11 +30,12 @@ function App() {
   return (
     <>
       <DarkModeProvider>
-        <Header />
+				<header className='header'>
+					<h1 className='h1'>{today}</h1>
+				</header>
         <main>
-          {/* <AppToDo /> */}
           <div className="container">
-            <TodoHeader />
+						<div className="todo-title-header">Todo List</div>
             <TodoFilter
               filters={filters}
               filter={filter}

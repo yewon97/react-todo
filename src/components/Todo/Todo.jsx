@@ -10,7 +10,6 @@ import {
 export default function Todo({ todo, onUpdate, onDelete, onModify }) {
   const { id, text, status } = todo;
   const handleChange = (e) => {
-		console.log('e: ', e);
     const status = e.target.checked ? 'completed' : 'active';
     onUpdate({ ...todo, status });
   };
