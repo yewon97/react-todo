@@ -34,3 +34,4 @@ Todo 앱은 다음과 같은 컴포넌트들로 구성되어 있습니다:
 - PostCSS를 사용해 `import styles from './FileName.module.css';` 컴포넌트별로 별도의 CSS 파일을 생성하고, import 문을 사용하여 해당 CSS 모듈을 컴포넌트에 적용했습니다. 이를 통해 CSS 스타일이 컴포넌트 스코프 내에서 유지되어, 스타일 충돌을 방지하고 재사용성을 높였습니다.
 - createContext 및 useContext: DarkModeContext 컨텍스트를 생성하고, useContext를 통해 다크 모드 상태 및 상태 변경 함수를 컴포넌트에서 사용할 수 있도록 했습니다. 이를 통해 애플리케이션 전체에서 다크 모드 상태를 공유하고 관리할 수 있습니다.
 - readTodosFromLocalStorage 함수를 사용하여 todos 데이터를 localStorage에 저장하고 불러왔습니다. setItem을 통해 데이터를 저장하고, getItem을 통해 데이터를 불러왔습니다. 이를 통해 새로고침해도 데이터를 유지할 수 있었습니다.
+- [개선] useReducer: todoReducer 함수와 함께 useReducer 훅을 사용하여 상태 관리에 활용했습니다. useReducer를 통해 액션에 따라 상태를 업데이트하고 반환하는 방식으로 상태 관리를 구현했습니다. 이를 통해 상태 업데이트 로직을 중앙 집중화하고, 컴포넌트 간의 상태 공유를 용이하게 했습니다.
