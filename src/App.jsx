@@ -12,7 +12,7 @@ const today = new Intl.DateTimeFormat('ko', { dateStyle: 'full' }).format(
   new Date(),
 );
 
-function App() {
+export default function App() {
   const [filter, setFilter] = useState(filters[0]);
   // const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
 	const [todos, dispatch] = useReducer(todoReducer, [], readTodosFromLocalStorage);
@@ -50,8 +50,6 @@ function App() {
     </>
   );
 }
-
-export default App;
 
 function readTodosFromLocalStorage() {
 	const todos = localStorage.getItem('todos');
